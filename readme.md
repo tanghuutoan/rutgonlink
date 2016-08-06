@@ -44,8 +44,8 @@ sudo docker run \
   --volume=/my/own/datadir:/usr/src/app/db:rw \
   --publish=3000:6969 \
   --detach=true \
-  --name=shorturl \
-  quocnguyen/shorturl:latest
+  --name=test \
+  tanghuutoan/shorturl:latest
 ```
 
 The `--volume /my/own/datadir:/usr/src/app/db` part of the command mounts the /my/own/datadir directory from the underlying host system as /usr/src/app/db inside the container, where shorturl by default will write its data files.
@@ -55,7 +55,8 @@ Note that users on host systems with SELinux enabled may see issues with this. T
 ```
 $ chcon -Rt svirt_sandbox_file_t /my/own/datadir
 ```
-
+Note: build docker image: docker build -t tanghuutoan/shorturl:latest .
+docker run -i -t tanghuutoan/shorturl /bin/bash
 # License
 
 MIT

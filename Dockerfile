@@ -1,4 +1,4 @@
-FROM node:6.31
+FROM node:6.3.1
 
 MAINTAINER toantang <thuutoan91@gmail.com>
 
